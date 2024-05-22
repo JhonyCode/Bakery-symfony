@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nuevo Pedido</h1>
+    {{ form_start(form) }}
+    {{ form_row(form.fecha_pedido) }}
+    {{ form_row(form.Usuario) }}
+
+    <label for="productos">Productos</label>
+    {% for producto in productos %}
+        <div>
+            <label>{{ producto.nombre }}</label>
+            <input type="number" name="productos[{{ producto.id }}]" value="0" min="0">
+        </div>
+    {% endfor %}
+
+    <button class="btn">Hacer Pedido</button>
+    {{ form_end(form) }}
+{% endblock %}

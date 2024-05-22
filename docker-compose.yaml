@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  # Define el servicio web
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  # Define el servicio de la base de datos
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"

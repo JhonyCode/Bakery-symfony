@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ListaProductos index{% endblock %}
+
+{% block body %}
+    <h1>ListaProductos index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cantidad</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for lista_producto in lista_productos %}
+            <tr>
+                <td>{{ lista_producto.id }}</td>
+                <td>{{ lista_producto.cantidad }}</td>
+                <td>
+                    <a href="{{ path('app_lista_productos_show', {'id': lista_producto.id}) }}">show</a>
+                    <a href="{{ path('app_lista_productos_edit', {'id': lista_producto.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_lista_productos_new') }}">Create new</a>
+{% endblock %}
