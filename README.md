@@ -5,7 +5,7 @@
 docker-compose up -d --build
 ```
 
-### También desde la carpeta raíz del proyecto (Sin docker)###
+### También desde la carpeta raíz del proyecto (Sin docker) ###
 
 ```
 symfony serve
