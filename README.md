@@ -1,7 +1,14 @@
-### 1. Instalación (En carpeta base del proyecto) ### 
+### 1. Instalación (En carpeta raíz del proyecto) ### 
+### Es necesario tener previamente instalado Docker ###
 
 ```
 docker-compose up -d --build
+```
+
+### También desde la carpeta raíz del proyecto (Sin docker)###
+
+```
+symfony serve
 ```
 
 # Los endpoints del proyecto #
