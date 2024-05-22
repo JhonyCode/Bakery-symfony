@@ -6,8 +6,8 @@ docker-compose up -d --build
 
 # Los endpoints del proyecto #
 
-| URL | TYPE | DESCRIPTION | ROLE |
-| :-------: | :------: | :------: | :-------: |
+| URL | TYPE | DESCRIPTION
+| :-------: | :------: | :------:
 | localhost:8080/cliente | GET | Obtiene un listado de clientes (Usuarios)
 | localhost:8080/cliente/new | POST | Registro de nuevo cliente
 | localhost:8080/cliente/{id} | GET | Información completa de un cliente
